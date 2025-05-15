@@ -1,0 +1,1 @@
+document.getElementById('root').innerText='App caricata correttamente con configurazione completa.';

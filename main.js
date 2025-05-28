@@ -1,1 +1,0 @@
-document.addEventListener('DOMContentLoaded',()=>{document.getElementById('configuratore').innerText='Configuratore attivo. Versione completa rigenerata correttamente.'});

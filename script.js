@@ -39,3 +39,24 @@ document.getElementById('config-form').addEventListener('submit', function(e) {
     output += "</table>";
     document.getElementById('output').innerHTML = output;
 });
+const svgPath = `svg/${model}/${motor}.svg`;
+
+fetch(svgPath)
+  .then(res => res.text())
+  .then(svg => {
+    // Sostituisci i segnaposto con i valori reali
+    svg = svg.replace(/{{LARGHEZZA_MAX}}/g, maxWidth)
+             .replace(/{{ALTEZZA_MAX}}/g, maxHeight)
+             .replace(/{{DIM_MONTANTI}}/g, montanti)
+             .replace(/{{RAL}}/g, document.getElementById("ral").value)
+             .replace(/{{LOGO}}/g, document.getElementById("logo").value)
+             .replace(/{{ALIMENTAZIONE}}/g, document.getElementById("alimentazione").value)
+             .replace(/{{LATO_BELLO}}/g, document.getElementById("lato_bello").value)
+             .replace(/{{CLASSE_VENTO}}/g, document.getElementById("vento").value)
+             .replace(/{{LUNGHEZZA_MONTANTE}}/g, lunghezzaMontante);
+
+    document.getElementById("output").innerHTML += "<br><h2>Disegno</h2>" + svg;
+  })
+  .catch(error => {
+    document.getElementById("output").innerHTML += "<p style='color:red;'>Errore nel caricamento del disegno SVG: " + svgPath + "</p>";
+  });

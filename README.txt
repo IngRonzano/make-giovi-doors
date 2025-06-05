@@ -1,0 +1,1 @@
+MAKE GIOVI DOORS - Inserire i disegni SVG nella cartella svg/{modello}/{motore}.svg con segnaposto id dinamici.

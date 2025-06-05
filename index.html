@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>MAKE GIOVI DOORS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Configuratore Porte</h1>
+    <form id="config-form">
+        <label>Modello:</label><select id="model"><option value="active-roll">ACTIVE ROLL</option><option value="master-roll">MASTER ROLL</option><option value="master-pack">MASTER PACK</option></select><br>
+        <label>Larghezza utile:</label><input id="width" type="number"><br>
+        <label>Altezza utile:</label><input id="height" type="number"><br>
+        <label>Motore:</label><select id="motor"><option value="frontale-destro">Frontale Destro</option><option value="frontale-sinistro">Frontale Sinistro</option><option value="laterale-destro">Laterale Destro</option><option value="laterale-sinistro">Laterale Sinistro</option></select><br>
+        <label>RAL:</label><input id="ral" type="text"><br>
+        <label>Materiale:</label><input id="materiale" type="text"><br>
+        <label>Logo:</label><input id="logo" type="text"><br>
+        <label>Posizione Logo:</label><input id="logo_pos" type="text"><br>
+        <label>Classe vento:</label><input id="vento" type="text"><br>
+        <label>Alimentazione:</label><input id="alimentazione" type="text"><br>
+        <label>Lato bello telo:</label><input id="lato_bello" type="text"><br>
+        <label>Tipo telo:</label><input id="telo" type="text"><br>
+        <label>Rullo avvolgitore:</label><input id="rullo" type="text"><br>
+        <label>Quadro:</label><input id="quadro" type="text"><br>
+        <button type="submit">Genera configurazione</button>
+    </form>
+    <div id="output"></div>
+    <script src="script.js"></script>
+</body>
+</html>
